@@ -1,0 +1,44 @@
+{
+  "name": "capeandbay-devs/vault-access",
+  "description": "A vault access",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "vault",
+    "capeandbay",
+    "anchorcms",
+    "1password"
+  ],
+  "authors": [
+    {
+      "name": "Angel Gonzalez",
+      "email": "angel@capeandbay.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.4|^8.0",
+    "ixudra/curl": "^6.21",
+    "lorisleiva/laravel-actions": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "CapeAndBay\\VaultAccess\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "CapeAndBay\\VaultAccess\\VaultAccessServiceProvider"
+      ],
+      "aliases": {
+        "VaultAccess": "CapeAndBay\\VaultAccess\\Facades\\VaultAccessFacade"
+      }
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}
